@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raiken AI — Demo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand">RAIKEN<span>AI</span></div>
+    <div class="status"><i></i> DEMO ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">AI PRACTICE ASSISTANT</p>
+      <h1>Smart Answer<br><span>Practice Mode</span></h1>
+      <p class="sub">Demo latihan pilihan ganda dengan overlay, deteksi soal, dan target nilai.</p>
+      <button id="startBtn" class="primary">START AI</button>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan Demo</h2>
+      <p>Halaman ini berisi soal latihan lokal untuk menguji sistem.</p>
+      <div id="questions"></div>
+    </section>
+  </main>
+</div>
+
+<button id="floatBtn" class="floating">AI</button>
+
+<div id="overlay" class="overlay hidden">
+  <div class="overlay-card">
+    <button id="closeBtn" class="close">×</button>
+    <div class="brand small">RAIKEN<span>AI</span></div>
+    <h2>AI Control</h2>
+
+    <label>Link halaman latihan</label>
+    <input id="urlInput" value="demo://raiken-practice" placeholder="Masukkan link latihan">
+
+    <label>Target nilai</label>
+    <div class="score-row">
+      <input id="targetInput" type="number" min="0" max="100" value="85">
+      <span>%</span>
+    </div>
+
+    <div class="info">
+      <span>Soal terdeteksi</span><b id="count">0</b>
+    </div>
+
+    <button id="analyzeBtn" class="primary full">ANALISIS & JAWAB OTOMATIS</button>
+    <div id="log" class="log">Menunggu perintah...</div>
+    <div id="result" class="result hidden"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
